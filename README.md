@@ -23,7 +23,7 @@ Interactive Streamlit dashboard for analyzing cloud kitchen profitability, opera
 - Statsmodels
 
 ## Project Structure
-
+```text
 Rebel_Food_Assignment/
 │
 ├── .streamlit/
@@ -37,7 +37,7 @@ Rebel_Food_Assignment/
 ├── analysis.ipynb
 ├── requirements.txt
 └── README.md
-
+```
 
 ## Dashboard Modules
 1. Kitchen Level PNL Dashboard
