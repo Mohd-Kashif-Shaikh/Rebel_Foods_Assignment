@@ -3,12 +3,11 @@ import pandas as pd
 import plotly.express as px
 st.set_page_config(page_title="Kitchen PNL Dashboard",layout="wide")
 st.markdown("""
-### Executive Summary
 This dashboard provides interactive profitability and variance analysis for cloud kitchen stores across different cities and revenue cohorts. The dashboard helps identify operational efficiency, profitability drivers, discount impact, and food wastage trends.
 """)
 st.title("Cloud Kitchen PNL Dashboard")
 st.markdown("Interactive Profitability & Variance Analysis Dashboard")
-@st.cache_data #for perfromace optiiation
+@st.cache_data #----for perfromace optiiation
 def load_data():
     df=pd.read_csv("asg//data//processed_kitchen_pnl.csv")
     return df
@@ -285,10 +284,7 @@ with tab2:
         use_container_width=True
     )
 st.subheader("Detailed Data View")
-st.dataframe(
-    filtered_df,
-    use_container_width=True
-)
+st.dataframe(filtered_df,use_container_width=True)
 csv = filtered_df.to_csv(index=False)
 st.download_button(
     label="Download Filtered Data",
